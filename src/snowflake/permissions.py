@@ -48,6 +48,12 @@ def is_event_sharing_enabled() -> bool:
 def is_application_local_to_package() -> bool:
     return False
 
+def is_application_authorized_for_telemetry_event_sharing() -> bool:
+    return False
+
+def is_application_all_mandatory_telemetry_event_definitions_enabled() -> bool:
+    return False
+
 def request_external_data() -> None:
     pass
 
