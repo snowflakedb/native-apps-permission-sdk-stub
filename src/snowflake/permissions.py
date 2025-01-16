@@ -1,5 +1,5 @@
 from .version import __version__
-from typing import Union, List
+from typing import List
 
 class AwsGateway:
     API_GATEWAY = 1,
@@ -37,7 +37,10 @@ def get_held_account_privileges(privilege_names: [str]) -> [str]:
 def get_missing_account_privileges(privilege_names: [str]) -> [str]:
     return privilege_names
 
-def get_reference_associations(reference_name: str, include_details: bool = False) -> Union[List[str], List[dict]]:
+def get_reference_associations(reference_name: str) -> [str]:
+    return []
+
+def get_detailed_reference_associations(reference_name: str) -> List[dict]:
     return []
 
 def request_event_sharing() -> None:
