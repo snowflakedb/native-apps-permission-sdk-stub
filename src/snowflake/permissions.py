@@ -112,6 +112,18 @@ def request_application_specification_review(spec_names: [str] = None) -> None:
     """
     pass
 
+def request_application_configuration_value(config_names: [str] = None) -> None:
+    """Opens a dialog on the Streamlit for consumer to review then set value
+    or take no action on given application configurations.
+
+    Args:
+        config_names: Optional list of configurations for review, if not specified, display all the configurations.
+
+    Returns:
+        None
+    """
+    pass
+
 def get_held_account_privileges(privilege_names: [str]) -> [str]:
     """Returns an array containing the privileges that have been granted to the Snowflake
     Native App based on the array of privileges passed to the function.
@@ -175,16 +187,37 @@ def get_application_specifications() -> List[dict]:
         An array of dictionaries.
         Each dictionary contains the following key/value pairs:
             {
-                “name”: “<value>”,
-                “created_on”: “<value>”,
-                “type”: “<value>”,
-                “sequence_number”: “<value>”,
-                “status”: “<value>”,
-                "status_upgraded_on": “<value>”,
-                “label”: “<value>”,
-                “description”: “<value>”,
-                “definition“: “<value>”,
-                “optional”: “<value>”,
+                "name": "<value>",
+                "created_on": "<value>",
+                "type": "<value>",
+                "sequence_number": "<value>",
+                "status": "<value>",
+                "status_upgraded_on": "<value>",
+                "label": "<value>",
+                "description": "<value>",
+                "definition": "<value>",
+                "optional": "<value>",
+            }
+    """
+    return []
+
+def get_application_configurations() -> List[dict]:
+    """Get all the configurations in the current application
+
+    Returns:
+        An array of dictionaries.
+        Each dictionary contains the following key/value pairs:
+            {
+                "name": "<value>",
+                "created_on": "<value>",
+                "updated_on": "<value>",
+                "type": "<value>",
+                "status": "<value>",
+                "value": "<value>",
+                "value_updated_on": "<value>",
+                "label": "<value>",
+                "description": "<value>",
+                "application_roles": "<value>",
             }
     """
     return []
