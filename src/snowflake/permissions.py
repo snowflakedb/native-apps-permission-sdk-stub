@@ -124,6 +124,17 @@ def request_application_configuration_value(config_names: [str] = None) -> None:
     """
     pass
 
+def request_application_connection_review(config_name: str) -> None:
+    """Opens a dialog on the Streamlit for consumer to review then approve or take no action on an application connection.
+
+    Args:
+        config_name: Name of the Application Configuration object
+
+    Returns:
+        None
+    """
+    pass
+
 def get_held_account_privileges(privilege_names: [str]) -> [str]:
     """Returns an array containing the privileges that have been granted to the Snowflake
     Native App based on the array of privileges passed to the function.
