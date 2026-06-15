@@ -1,6 +1,14 @@
 from .version import __version__
 from typing import List
 
+class PermissionRequestNotAvailableError(Exception):
+    pass
+
+
+def is_viewer_mode() -> bool:
+    return False  # stub always returns False (safe default for local testing)
+
+
 class AwsGateway:
     API_GATEWAY = 1,
     PRIVATE_API_GATEWAY = 2,
